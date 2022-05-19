@@ -5,9 +5,11 @@
 ** my_putchar
 */
 
-#include "text_to_multi_tap.h"
+#include "fibonacci_checker.h"
 
 void my_putchar(char c)
 {
+    if (!char)
+        return NULL;
     write (1, &c, 1);
 }

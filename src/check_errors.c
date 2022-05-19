@@ -1,22 +1,38 @@
 /*
 ** EPITECH PROJECT, 2022
-** check errors
+** check error
 ** File description:
-** check errors
+** check error
 */
 
-#include "text_to_multi_tap.h"
+#include "fazz_bizz.h"
 
-int check_error(char const *str)
+static int my_strlen(char const *str)
 {
     int index = 0;
 
     if (!str)
-        return 84;
-    while (str[index] != '\0') {
-        if (is_char(str[index]) == 84)
-            return 84;
+        return NO_STR;
+    while (str[index] != '\0')
         index += 1;
+    return index;
+}
+
+static void display_error(void)
+{
+    char *str = "Error: the second parameter must \
+be greater than the first one.";
+    if (my_strlen(str) == NO_STR)
+    write(2, str, my_strlen(str));
+}
+
+int check_errors(char const *number_one, char const *number_two)
+{
+    if (!number_one || !number_two)
+        return 84;
+    if (atoi(number_one) > atoi(number_two)) {
+        display_error();
+        return 84;
     }
     return 0;
 }

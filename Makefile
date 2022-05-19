@@ -5,14 +5,9 @@
 ## Makefile
 ##
 
-SRC	=	src/main.c    \
-		src/text_to_multi_tap.c\
-		lib/my/my_putchar.c\
-		lib/my/my_putstr.c\
-		lib/my/is_char.c\
-		src/display_maj.c\
-		src/check_errors.c\
-		src/display_space.c
+SRC	=	src/main.c		\
+		src/check_errors.c	\
+		src/fazz_bizz.c
 
 OBJ	=	$(SRC:.c=.o)
 
@@ -20,7 +15,7 @@ CPPFLAGS	=	-Iinclude
 
 CFLAGS	=	-W -Wall -Wextra
 
-NAME	=	text_to_multi_tap
+NAME	=	fazzbizz
 
 ALLFLAGS	=	$(CFLAGS) $(CPPFLAGS) $(LDLIBS)
 
