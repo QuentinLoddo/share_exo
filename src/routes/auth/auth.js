@@ -1,4 +1,4 @@
-const {register, check_account_mail, get_mail_account} = require('./../user/user.query');
+const {register, check_account_mail, get_mail_account} = require('../user/user.query');
 
 module.exports = function(app, bcrypt) {
     app.post('*/login', (req, res) => {

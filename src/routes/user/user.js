@@ -25,7 +25,7 @@ module.exports = function(app, bcrypt) {
         var first_name = req.body["firstname"];
         var pwd = req.body["password"];
 
-        pwd = bcrypt.hashSync(pwd, 15);
+        pwd = bcrypt.hashSync(pwd, 10);
         update_user_by_id(res, id, mail, pwd, last_name, first_name);
     });
 }
